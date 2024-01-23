@@ -24,5 +24,5 @@ int main(int argc, char **argv)
 
     if (argc == 2)
         ft_putstr(argv[i]);
-    write (1, "\n", 2);
+    write (1, "\n", 1);
 }

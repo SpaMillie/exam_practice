@@ -34,5 +34,5 @@ int main(int argc, char **argv)
 {
     if (argc == 2)
         go_through_string(argv[1]);
-    write (1, "\n", 2);
+    write (1, "\n", 1);
 }

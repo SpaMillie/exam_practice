@@ -18,5 +18,5 @@ int main(int argc, char **argv)
 {
     if (argc == 2)
         rev_print(argv[1]);
-    write(1, "\n", 2);
+    write(1, "\n", 1);
 }

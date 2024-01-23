@@ -33,7 +33,7 @@ int   ft_putchar(int x)
         n = write(1, "buzz", 5);
     else
        ft_putnum(x);
-    n += write(1, "\n", 2);
+    n += write(1, "\n", 1);
     if (n == 4 || n == 1)
         n = -1;
     return(n);

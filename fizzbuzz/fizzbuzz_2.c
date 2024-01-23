@@ -23,7 +23,7 @@ void ft_fizzbuzz(int x)
         write(1, "buzz", 5);
     else
         ft_putnum(x);
-    write(1, "\n", 2);  
+    write(1, "\n", 1);  
 }
 
 int main(void)
