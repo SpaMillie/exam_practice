@@ -1,45 +1,71 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   camel_to_snake.c                                   :+:      :+:    :+:   */
+/*   add_prime_sum.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mspasic <mspasic@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/26 21:30:52 by mspasic           #+#    #+#             */
-/*   Updated: 2024/02/26 22:23:52 by mspasic          ###   ########.fr       */
+/*   Created: 2024/02/27 17:23:10 by mspasic           #+#    #+#             */
+/*   Updated: 2024/02/27 17:53:39 by mspasic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-
-void	camelling(char *str)
+void	ft_error(void)
 {
-	int		i;
-	char	c;
+	write(1, "0", 1);
+}
+
+int	ft_strlen(char *s)
+{
+	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while(s[i] != '\0')
 	{
-		if (str[i] >= 'A' && str[i] <= 'Z')
-		{
-			c = str[i] + 32;
-			write(1, "_", 1);
-			write(1, &c, 1);
+		i++;
+	}
+	return (i);
+}
+
+int	ft_atoi(char *s)
+{
+	int	i;
+	int	n;
+
+	i = 0;
+	n = ft_strlen(s);
+	while(s[i] != '\0')
+	{
+		if (s[i] == '+' && i = 0)
 			i++;
+		if (s[i] >= '0' && s[i] <= '9')
+		{
+			n = s[i] + '0';
 		}
 		else
 		{
-			write(1, &(str[i]), 1);
-			i++;
+			ft_error();
+			return(0);
 		}
+		i++;
 	}
+}
+
+
+void	add_prime(char *s)
+{
+	int	i;
+
+	i = 0;
+	
 }
 
 int	main(int argc, char **argv)
 {
 	if (argc == 2)
-	{
-		camelling (argv[1]);
-	}
-	write(1, "\n", 1);
+		add_prime(argv[1]);
+	else
+		ft_error;
+	write (1, "\n", 1);
 }
